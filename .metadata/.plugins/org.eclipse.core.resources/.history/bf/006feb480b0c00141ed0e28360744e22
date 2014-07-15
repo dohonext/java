@@ -62,7 +62,7 @@ class BirthDay {
 		}
 		
 		if (month == 4 || month == 6 || month == 9 || month ==11 ) {
-			if (day > 30){
+			if (day >30){
 				return false;
 			}
 		}

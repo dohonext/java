@@ -20,11 +20,12 @@ public class BirthDayMain {
 	}
 }
 
-public class BirthDay {
+class BirthDay {
 	private int year;
 	private int month;
 	private int day;
 	
+	public BirthDay(){};
 	public BirthDay(int year, int month, int day){
 		this.year = year;
 		this.month = month;
@@ -60,13 +61,13 @@ public class BirthDay {
 			return false;
 		}
 		
-		if (year % 4 = 0){ 
+		if (year % 4 == 0){ 
 			if (year % 100 == 0){
 				if (year % 400 == 0){
-					leapYear = false;
+					leapYear = true;
 				}
 				else{
-					leapYear = true;
+					leapYear = false;
 				}	
 			}
 			else {

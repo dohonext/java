@@ -1,0 +1,27 @@
+package myfirst;
+
+public class manMain {
+
+	public static void main(String[] args) {
+		
+		Man man1 = new Man();
+		Man man2 = new Man("Charles",32);
+		
+		//man1 print
+		System.out.println(man1.name);
+		System.out.println(man1.age);
+		System.out.println(man1.children);
+		System.out.println(man1.marraged);
+		
+		//man2 print
+		System.out.println(man2.name);
+		System.out.println(man2.age);
+		System.out.println(man2.children);
+		System.out.println(man2.marraged);
+		
+		man2.setName("Chrlie");
+		System.out.println(man2.name);
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package inheritance;
+
+class Shape{
+	public void draw(){
+		System.out.println("draw shpae");
+	}
+}
+
+class Circle extends Shape{
+	public void draw(){
+		System.out.println("draw circle");
+	}
+}
+
+class Rectangle extends Shape{
+	public void draw(){
+		System.out.println("draw rectangle");
+	}
+}
+
+class Triangle extends Shape{
+	public void draw(){
+		System.out.println("draw triangle");
+	}
+}
+
+public class ShapeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

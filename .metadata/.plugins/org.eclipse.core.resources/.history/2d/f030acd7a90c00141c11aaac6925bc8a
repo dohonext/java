@@ -1,0 +1,11 @@
+package company;
+
+public class SingleMain {
+
+	public static void main(String[] args) {
+		String companyName = Singleton.getCompanyName();
+		System.out.Println(companyName);
+
+	}
+
+}

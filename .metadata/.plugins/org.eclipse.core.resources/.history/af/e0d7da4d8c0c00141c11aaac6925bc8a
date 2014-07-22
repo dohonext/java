@@ -1,0 +1,15 @@
+package myfirst;
+
+public class Person {
+	String name;
+	int age;
+	boolean isMarried;
+	int howManyChild;
+	
+	Person(){}
+	
+	Person(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+}

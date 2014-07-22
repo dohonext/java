@@ -1,0 +1,13 @@
+package homework2;
+
+public class CarMain {
+
+	public CarMain() {
+		
+		//가격 private으로 해서 getter 이용할것
+		//Car라는 상위 클래스 상속할것
+		//자동차 값을 계산하는거 Calculator 클래스로 따로 만들어서 계산하기. (main에서 불러다 쓰기)
+		//클래스 6개 (회사 - singleton)
+	}
+
+}

@@ -16,4 +16,8 @@ public class Manager extends Employee{
 	public String getDetails(){             //super에 있는 이름 그대로 하지만 overriding(재정의)하는것임. 
 		return name + "," + salary + "," + department;
 	}
+	
+	public String getdetails2(){       // super의 겟디테일을 쓰고 싶을땐 하위 클래스에서 새로 하나 만들어서 수퍼껄 불러주면 된다 
+		return super.getDetails();
+	}
 }

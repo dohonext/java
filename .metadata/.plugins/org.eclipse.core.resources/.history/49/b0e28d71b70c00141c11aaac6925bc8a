@@ -1,9 +1,0 @@
-package homework2;
-
-public class CarMain {
-
-	public CarMain() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

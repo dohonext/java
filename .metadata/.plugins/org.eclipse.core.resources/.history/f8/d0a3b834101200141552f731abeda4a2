@@ -1,0 +1,31 @@
+package casting;
+
+class Servant{
+	
+	public void washCar(){
+		System.out.println("세차 합니다");
+	}
+
+	public void cleaningHouse(){
+		System.out.println("청소 합니다");
+	}
+}
+
+class Master{
+	public void manage(Object obj){
+		Servant s = (Servant)obj;
+		s.washCar();
+		s.cleaningHouse();
+	}
+}
+
+public class ServantTest {
+
+	public static void main(String[] args) {
+		
+		Master m = new Master();
+		Servant s = new Servant();
+		m.manage(s);
+	}
+
+}

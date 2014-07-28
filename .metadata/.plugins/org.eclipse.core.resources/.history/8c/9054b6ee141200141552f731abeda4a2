@@ -1,0 +1,17 @@
+package arraylist;
+
+class Company {
+	
+}
+
+
+
+
+public class ArrayListMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

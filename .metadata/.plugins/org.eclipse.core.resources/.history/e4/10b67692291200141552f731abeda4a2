@@ -1,0 +1,9 @@
+package abstractex;
+
+public class TestSub {
+
+	public TestSub() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

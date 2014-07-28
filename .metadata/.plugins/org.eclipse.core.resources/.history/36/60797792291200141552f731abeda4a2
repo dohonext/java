@@ -1,0 +1,9 @@
+package template;
+
+public class AbstractDisplay {
+
+	public AbstractDisplay() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

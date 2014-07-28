@@ -1,0 +1,39 @@
+package casting;
+
+class Servant{
+	
+	public void washCar(){
+		System.out.println("세차 합니다");
+	}
+
+	public void cleaningHouse(){
+		System.out.println("청소 합니다");
+	}
+}
+
+class Master{
+	public void manage(Object obj){     //s를 오브젝트로 받아서 서번트로 형변환 시켜준것임. 
+		if (obj instanceof Servant) {
+			Servant s = (Servant)obj;
+			s.washCar();
+			s.cleaningHouse();
+		}
+		else{
+			System.out.println("입력하신 오브젝트는 Servant가 될 수 없습니다");
+		}
+	}
+}
+
+public class ServantTest {
+
+	public static void main(String[] args) {
+		
+		Master m = new Master();
+		Servant s = new Servant();
+		m.manage(s);
+		
+		String str = new String();
+		m.manage(str);
+	}
+
+}

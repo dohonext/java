@@ -10,7 +10,7 @@ public class EmployeeMain {
 		System.out.println(m.getDetails());
 		//m.name = "이승기";
 		//System.out.println(m.name);
-
+		
 	}
 
 }

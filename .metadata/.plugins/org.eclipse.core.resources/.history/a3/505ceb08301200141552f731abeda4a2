@@ -1,0 +1,9 @@
+package hyundai;
+
+public class HyundaiCar {
+
+	public HyundaiCar() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

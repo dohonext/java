@@ -1,9 +1,0 @@
-package hyundai;
-
-public class Grandeur {
-
-	public Grandeur() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

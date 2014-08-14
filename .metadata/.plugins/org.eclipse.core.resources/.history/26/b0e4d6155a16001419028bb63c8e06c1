@@ -1,9 +1,0 @@
-package homework3;
-
-public class GameLevel {
-
-	public GameLevel() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

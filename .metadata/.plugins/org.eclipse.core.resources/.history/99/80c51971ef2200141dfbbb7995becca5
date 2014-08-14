@@ -1,0 +1,17 @@
+package MazeSolve;
+
+public class PlayerDirection4 implements Player{
+
+	@Override
+	public void go(int x, int y) {
+		 Maze.getInstance().move(x,y);
+		
+	}
+
+	@Override
+	public void goBack(int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

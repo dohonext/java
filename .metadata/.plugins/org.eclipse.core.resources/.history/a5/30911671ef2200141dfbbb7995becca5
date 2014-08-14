@@ -1,0 +1,11 @@
+package MazeSolve;
+
+public class Direction4 {
+	public void go(int x, int y){
+		  Maze.getInstance().move(x,y);
+	}
+	
+	public void backPath(){
+		
+	}
+}

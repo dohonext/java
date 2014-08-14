@@ -1,9 +1,0 @@
-package homework3;
-
-public class Player {
-
-	public Player() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

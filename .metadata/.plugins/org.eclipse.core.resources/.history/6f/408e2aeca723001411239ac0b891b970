@@ -1,0 +1,24 @@
+package week6;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
+
+public class asd {
+
+	public static void main(String[] args) {
+		
+		File file = new File("/file.txt");
+		Scanner input = new Scanner(file);
+
+		while(input.hasNext()) {
+		    String nextToken = input.next();
+		}
+
+		input.close();
+		}
+	
+
+}

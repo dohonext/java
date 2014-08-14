@@ -1,0 +1,9 @@
+package treemap;
+
+public class AccountNumber {
+	private String accountNumber;
+	
+	public AccountNumber(String accountNumber){
+		this.accountNumber = accountNumber;
+	}
+}

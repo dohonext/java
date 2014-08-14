@@ -1,9 +1,0 @@
-package hyundai;
-
-public class Avante {
-
-	public Avante() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

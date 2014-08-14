@@ -1,0 +1,19 @@
+package MazeSolve;
+
+public interface Player {
+	public int selectDirection();
+	public boolean checkPath(int direction);
+	public void go(int x, int y);
+	public void stackCountUp();
+	public void stackCountDown();
+	public void pathCountUp();
+	
+	public boolean checkN();
+	public boolean checkE();
+	public boolean checkS();
+	public boolean checkW();
+	public boolean checkNE();
+	public boolean checkES();
+	public boolean checkSW();
+	public boolean checkWN();
+}

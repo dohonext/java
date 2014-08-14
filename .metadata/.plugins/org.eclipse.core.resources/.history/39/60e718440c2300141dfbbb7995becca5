@@ -1,0 +1,26 @@
+package MazeSolve;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		PlayerDirection8 p = new PlayerDirection8();
+		int reset = 1;
+	
+		while(reset == 1){
+			while(Maze.getInstance().getMap(8,8) != 0){
+				p.start();
+				Maze.getInstance().showMaze();
+				p.showPathCount();
+				//sleep(1초);
+				//Console.Clear;
+			}
+			System.out.print("Maze is solved. try again? (1=yes/2=no)");
+			Scanner sc = new Scanner(System.in);
+			reset = sc.nextInt();
+		}
+		
+	}
+
+}

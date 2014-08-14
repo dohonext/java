@@ -1,0 +1,32 @@
+package week6;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+
+
+public class asd {
+
+	public static void main(String[] args) {
+		
+		int reset = 1;
+		
+		while(reset == 1){
+			
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			System.out.print("Maze is solved. try again? (1=yes/2=no)");
+			try {
+				Runtime.getRuntime().exec("cls");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//reset = sc.nextInt();
+		}
+	}
+
+}

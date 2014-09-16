@@ -1,0 +1,18 @@
+package decoratord;
+
+public class Decorator extends Airplane{
+
+	private Airplane airplane;
+	
+	public Decorator(Airplane airplane){
+		this.airplane = airplane;
+	}
+	
+	@Override
+	public void attack() {
+		airplane.attack();
+	}
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package decorator;
+
+public class AirplaneTest {
+
+	public AirplaneTest() {
+		Airplane frontAirplane = new FrontAirplane();
+		frontAirplane.attack();
+	}
+
+}

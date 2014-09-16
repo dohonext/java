@@ -1,0 +1,13 @@
+package decoratord;
+
+public class AirplaneTest {
+
+	public AirplaneTest() {
+		Airplane frontAirplane = new FrontAirplane();
+		frontAirplane.attack();
+		
+		Airplane missile = new SideAirplane(new MissileAirplane(frontAirplane));
+		missile.attack();
+	}
+
+}

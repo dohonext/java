@@ -1,0 +1,6 @@
+package decoratord;
+
+public abstract class Airplane {
+	
+	public abstract void attack();
+}

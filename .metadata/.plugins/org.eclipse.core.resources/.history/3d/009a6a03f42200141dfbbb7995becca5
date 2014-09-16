@@ -1,5 +1,0 @@
-package MazeSolve;
-
-public interface Player {
-
-}

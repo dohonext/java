@@ -1,0 +1,11 @@
+package decorator;
+
+public class FrontAirplane extends Airplane{
+
+	@Override
+	public void attack() {
+		System.out.println("fly~~~");
+		System.out.println("Front Attack");
+	}
+	
+}

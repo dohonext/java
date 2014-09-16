@@ -1,0 +1,49 @@
+package train;
+
+public class Customer {
+	private int id;
+	private String name;
+	private int stationReachTime;
+	private int ticketingTime;
+	private int departureStation;
+	private int arrivalStation;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getStationReachTime() {
+		return stationReachTime;
+	}
+	public void setStationReachTime(int stationReachTime) {
+		this.stationReachTime = stationReachTime;
+	}
+	public int getTicketingTime() {
+		return ticketingTime;
+	}
+	public void setTicketingTime(int ticketingTime) {
+		this.ticketingTime = ticketingTime;
+	}
+	public int getDepartureStation() {
+		return departureStation;
+	}
+	public void setDepartureStation(int departureStation) {
+		this.departureStation = departureStation;
+	}
+	public int getArrivalStation() {
+		return arrivalStation;
+	}
+	public void setArrivalStation(int arrivalStation) {
+		this.arrivalStation = arrivalStation;
+	}
+	
+}

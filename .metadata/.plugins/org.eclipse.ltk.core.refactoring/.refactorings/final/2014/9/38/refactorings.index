@@ -1,0 +1,12 @@
+1410793007303	Encapsulate field 'id'
+1410793016635	Encapsulate field 'name'
+1410793021797	Encapsulate field 'stationReachTime'
+1410793028246	Encapsulate field 'ticketingTime'
+1410793033283	Encapsulate field 'departureStation'
+1410793039617	Encapsulate field 'arrivalStation'
+1410872514138	Delete element
+1410872518424	Delete element
+1410872522094	Delete element
+1410872525919	Delete element
+1410873949366	Encapsulate field 'waitingForTicketTime'
+1410873953392	Encapsulate field 'waitingForTrainTime'

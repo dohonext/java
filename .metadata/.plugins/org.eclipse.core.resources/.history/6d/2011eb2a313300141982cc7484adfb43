@@ -1,0 +1,15 @@
+package decorator;
+
+public class SideAirplane extends Decorator {
+
+	public SideAirplane(Airplane airplane) {
+		super(airplane);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void attack(){
+		super.attack();
+		System.out.println("Side Attack!");
+	}
+
+}

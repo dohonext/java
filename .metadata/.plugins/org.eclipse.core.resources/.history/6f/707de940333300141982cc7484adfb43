@@ -1,0 +1,10 @@
+package decorator2;
+
+public class Americano extends Coffee{
+
+	@Override
+	public void make() {
+		System.out.print("Starbucks americano ");
+	}
+
+}

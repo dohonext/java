@@ -1,0 +1,15 @@
+package decorator2;
+
+public class Whipping extends Coffee {
+
+	Americano americano;
+	
+	@Override
+	public void make() {
+		americano.make();
+		
+		
+	}
+	
+	
+}

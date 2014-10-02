@@ -1,0 +1,171 @@
+package train;
+
+public class Customer {
+	private String id;
+	private String name;
+	private String stationReachTime;
+	private String ticketingTime;
+	private String departureStation;
+	private String arrivalStation;
+	private String waitingForTicketingTime;
+	private boolean HasTicket;
+	private String trainStartTime;
+	private String trainArrivalTime;
+	Client(){};
+	
+	public Customer(String id, String name, String stationReachTime, String ticketingTime, 
+					String departureStation, String arrivalStation) {
+		this.id = id;
+		this.name = name;
+		this.stationReachTime = stationReachTime;
+		this.ticketingTime = ticketingTime;
+		this.departureStation = departureStation;
+		this.arrivalStation = arrivalStation;
+	}
+	
+	public boolean isHasTicket() {
+		return HasTicket;
+	}
+
+	public void setHasTicket(boolean hasTicket) {
+		HasTicket = hasTicket;
+	}
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				id+":"+
+				name+":"+
+				stationReachTime+":"+
+				ticketingTime+":"+
+				//출발역
+				//도착역
+				
+				//출력정보
+				waitingForTicketingTime+":"+
+				tokenTimeForTicketing+":"+
+				waitingForTraStringime+":"+
+				arrivedTimeToTrain+":");
+		return sb.toString();
+	}
+	
+	public String csvHeaderToString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				"아이디"+","+
+				"이름"+","+
+				"도착시간"+","+
+				"티켓팅소요시간"+","+
+				"출발역"+","+
+				"도착역"+","+
+				"티켓대기시간"+","+
+				"티켓팅한시간"+","+
+				"열차기다린시간"+","+
+				"목적지도착시간"+"\n");
+		return sb.toString();
+	}
+	
+	public String csvToString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				id+","+
+				name+","+
+				stationReachTime+","+
+				ticketingTime+","+
+				departureStation+","+
+				arrivalStation+","+
+				waitingForTicketingTime+","+
+				tokenTimeForTicketing+","+
+				waitingForTraStringime+","+
+				arrivedTimeToTrain+"\n"
+		);
+		return sb.toString();
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getStationReachTime() {
+		return stationReachTime;
+	}
+
+	public void setStationReachTime(String stationReachTime) {
+		this.stationReachTime = stationReachTime;
+	}
+
+	public String getTicketingTime() {
+		return ticketingTime;
+	}
+
+	public void setTicketingTime(String ticketingTime) {
+		this.ticketingTime = ticketingTime;
+	}
+
+	public String getDepartureStation() {
+		return departureStation;
+	}
+
+	public void setDepartureStation(String departureStation) {
+		this.departureStation = departureStation;
+	}
+
+	public String getArrivalStation() {
+		return arrivalStation;
+	}
+
+	public void setArrivalStation(String arrivalStation) {
+		this.arrivalStation = arrivalStation;
+	}
+
+	public String getWaitingForTicketingTime() {
+		return waitingForTicketingTime;
+	}
+
+	public void setWaitingForTicketingTime(String waitingForTicketingTime) {
+		this.waitingForTicketingTime = waitingForTicketingTime;
+	}
+
+	public String getTokenTimeForTicketing() {
+		return tokenTimeForTicketing;
+	}
+
+	public void setTokenTimeForTicketing(String tokenTimeForTicketing) {
+		this.tokenTimeForTicketing = tokenTimeForTicketing;
+	}
+
+	public String getWaitingForTraStringime() {
+		return waitingForTraStringime;
+	}
+
+	public void setWaitingForTraStringime(String waitingForTraStringime) {
+		this.waitingForTraStringime = waitingForTraStringime;
+	}
+
+	public String getArrivedTimeToTrain() {
+		return arrivedTimeToTrain;
+	}
+
+	public void setArrivedTimeToTrain(String arrivedTimeToTrain) {
+		this.arrivedTimeToTrain = arrivedTimeToTrain;
+	}
+}

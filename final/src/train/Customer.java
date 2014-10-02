@@ -1,85 +1,129 @@
 package train;
 
-import java.util.ArrayList;
-
 public class Customer {
-	private int id;
+	private String id;
 	private String name;
-	private int stationReachTime;
-	private int ticketingTime;
+	private String stationReachTime;
+	private String ticketingTime;
 	private String departureStation;
 	private String arrivalStation;
-	private int waitingForTicketTime;
-	private int waitingForTrainTime;
+	private String waitingForTicketingTime;
+	private boolean HasTicket;
+	private String trainStartTime;
+	private String trainArrivalTime;
+
 	
-	public Customer(int id, String name, int stationReachTime, int ticketingTime, 
-					String departureStation, String arrivalStation) {
-		this.id = id;
-		this.name = name;
-		this.stationReachTime = stationReachTime;
-		this.ticketingTime = ticketingTime;
-		this.departureStation = departureStation;
-		this.arrivalStation = arrivalStation;
-	}
-	
-	public Customer(ArrayList<String> customerInfo) {
-		this(
-			Integer.parseInt(customerInfo.get(0)),
-			customerInfo.get(1),
-			Integer.parseInt(customerInfo.get(2)),
-			Integer.parseInt(customerInfo.get(3)),
-			customerInfo.get(4),
-			customerInfo.get(5)
-		);
-	}
-	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+
+
+	public void setId(String id) {
 		this.id = id;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getStationReachTime() {
+
+
+	public String getStationReachTime() {
 		return stationReachTime;
 	}
-	public void setStationReachTime(int stationReachTime) {
+
+
+	public void setStationReachTime(String stationReachTime) {
 		this.stationReachTime = stationReachTime;
 	}
-	public int getTicketingTime() {
+
+
+	public String getTicketingTime() {
 		return ticketingTime;
 	}
-	public void setTicketingTime(int ticketingTime) {
+
+
+	public void setTicketingTime(String ticketingTime) {
 		this.ticketingTime = ticketingTime;
 	}
+
+
 	public String getDepartureStation() {
 		return departureStation;
 	}
+
+
 	public void setDepartureStation(String departureStation) {
 		this.departureStation = departureStation;
 	}
+
+
 	public String getArrivalStation() {
 		return arrivalStation;
 	}
+
+
 	public void setArrivalStation(String arrivalStation) {
 		this.arrivalStation = arrivalStation;
 	}
-	public int getWaitingForTicketTime() {
-		return waitingForTicketTime;
+
+
+	public String getWaitingForTicketingTime() {
+		return waitingForTicketingTime;
 	}
-	public void setWaitingForTicketTime(int waitingForTicketTime) {
-		this.waitingForTicketTime = waitingForTicketTime;
+
+
+	public void setWaitingForTicketingTime(String waitingForTicketingTime) {
+		this.waitingForTicketingTime = waitingForTicketingTime;
 	}
-	public int getWaitingForTrainTime() {
-		return waitingForTrainTime;
+
+
+	public boolean isHasTicket() {
+		return HasTicket;
 	}
-	public void setWaitingForTrainTime(int waitingForTrainTime) {
-		this.waitingForTrainTime = waitingForTrainTime;
+
+
+	public void setHasTicket(boolean hasTicket) {
+		HasTicket = hasTicket;
 	}
+
+
+	public String getTrainStartTime() {
+		return trainStartTime;
+	}
+
+
+	public void setTrainStartTime(String trainStartTime) {
+		this.trainStartTime = trainStartTime;
+	}
+
+
+	public String getTrainArrivalTime() {
+		return trainArrivalTime;
+	}
+
+
+	public void setTrainArrivalTime(String trainArrivalTime) {
+		this.trainArrivalTime = trainArrivalTime;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Client [ID=" + id + ", Name=" + name
+				+ ", stationReachTime=" + stationReachTime + ", TicketingTime="
+				+ ticketingTime + ", departureStation=" + departureStation
+				+ ", ArrivalStaion=" + arrivalStation + ", WaitingForTicketingTime="
+				+ waitingForTicketingTime + ", HasTicket=" + HasTicket
+				+ ", trainStartTime=" + trainStartTime + ", trainArrivalTime="
+				+ trainArrivalTime + "]";
+	}
+	
+	
 	
 }

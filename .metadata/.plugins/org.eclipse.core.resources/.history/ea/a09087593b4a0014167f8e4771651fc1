@@ -1,0 +1,141 @@
+package train;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class TrainMain {
+
+		public final static int MINUTE = 1000;
+		
+		public static ArrayList<Customer> finalQueue = new ArrayList();
+		
+		public static synchronized void main(String args[]) throws IOException, NumberFormatException, InterruptedException
+		{
+			CustomerLoaderFromFile makeQueue = new CustomerLoaderFromFile();
+			
+			SeoulStation seoulStation = new SeoulStation();
+			ChuncheonStation chuncheonStation = new ChuncheonStation();
+			WonjuStation wonjuStation = new WonjuStation();
+			GwangjuStation gwangjuStation = new GwangjuStation();
+			AsanStation asanStation = new  AsanStation();
+			GyeongjuStation gyeongjuStation = new GyeongjuStation();
+			DaejeonStation daejeonStation = new DaejeonStation();
+			
+			Thread.sleep(MINUTE);
+			
+			Thread seoulThread = new StationThread(seoulStation);
+			Thread chuncheonThread = new StationThread(chuncheonStation);
+			Thread wonjuThread = new StationThread(wonjuStation);
+			Thread gwangjuThread = new StationThread(gwangjuStation);
+			Thread asanThread = new StationThread(asanStation);
+			Thread gyeongjuThread = new StationThread(gyeongjuStation);
+			Thread daejeonThread = new StationThread(daejeonStation);
+			
+			Thread seoulTrainThread = new TrainThread(seoulStation);
+			Thread chuncheonTrainThread = new TrainThread(chuncheonStation);
+			Thread wonjuTrainThread = new TrainThread(wonjuStation);
+			Thread gwangjuTrainThread = new TrainThread(gwangjuStation);
+			Thread asanTrainThread = new TrainThread(asanStation);
+			Thread gyeongjuTrainThread = new TrainThread(gyeongjuStation);
+			Thread daejeonTrainThread = new TrainThread(daejeonStation);
+			
+			
+			Time time = new Time();
+			Thread timeThread = new Thread(time);
+			timeThread.setDaemon(true);
+			timeThread.start();
+			
+			Thread.sleep(5);
+			
+			seoulThread.start();
+			chuncheonThread.start();
+			wonjuThread.start();
+			gwangjuThread.start();
+			asanThread.start();
+			gyeongjuThread.start();
+			daejeonThread.start();
+			
+			Thread.sleep(5);
+		
+			seoulTrainThread.start();
+			chuncheonTrainThread.start();
+			wonjuTrainThread.start();
+			gwangjuTrainThread.start();
+			asanTrainThread.start();
+			gyeongjuTrainThread.start();
+			daejeonTrainThread.start();
+
+			for(int i = 0 ; i < makeQueue.customerList.size() ; i++)
+			{
+				try
+				{
+					Customer nowClient = makeQueue.customerList.get(i);
+					
+					//Time is Ticking
+					if(i > 1)
+					{
+						Customer previousClient = makeQueue.customerList.get(i-1);
+						int a = Integer.parseInt(nowClient.getTrainArrivalTime()) - Integer.parseInt(previousClient.getTrainArrivalTime());
+						Thread.sleep(a * MINUTE);
+				
+					}
+					
+					//makeStationQueue
+					
+					if(nowClient.getDepartureStation().equals(new String("Seoul")))
+					{
+						System.out.println("SeoulStation enqueue");
+						seoulStation.waitTicketingQueue.add(nowClient);
+					}
+					
+					else if (nowClient.getDepartureStation().equals(new String("Chuncheon")))
+					{
+						System.out.println("Chuncheon Station enqueue");
+						chuncheonStation.waitTicketingQueue.add(nowClient);
+					}
+					
+					else if (nowClient.getDepartureStation().equals(new String("Wonju")))
+					{
+						System.out.println("WonjuStation enqueue");
+						wonjuStation.waitTicketingQueue.add(nowClient);
+						
+					}
+					
+					else if (nowClient.getDepartureStation().equals(new String("Daejeon")))
+					{
+						System.out.println("DaejeonStation enqueue");
+						daejeonStation.waitTicketingQueue.add(nowClient);
+					}
+					
+					else if (nowClient.getStartStation().equals(new String("Asan")))
+					{
+						System.out.println("AsanStation enqueue");
+						asanStation.waitTicketingQueue.add(nowClient);
+					}
+					
+					else if (nowClient.getStartStation().equals(new String("Gyeongju")))
+					{
+						System.out.println("GyeongjuStation enqueue");
+						gyeongjuStation.waitTicketingQueue.add(nowClient);
+					}
+					else if (nowClient.getStartStation().equals(new String("Gwangju")))
+					{
+						System.out.println("GwangjuStation enqueue");
+						gwangjuStation.waitTicketingQueue.add(nowClient);
+					}
+					else{
+						System.out.println("SomeThing Wrong?");
+					}
+					
+				
+				}catch(Exception e){}
+			}
+			
+			
+		}
+		
+		
+		
+	}
+
+}

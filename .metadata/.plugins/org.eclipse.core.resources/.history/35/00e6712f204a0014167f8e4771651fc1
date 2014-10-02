@@ -1,0 +1,5 @@
+package train;
+
+public class CustomerLoaderFromFile {
+	public ArrayList<customer> customer
+}

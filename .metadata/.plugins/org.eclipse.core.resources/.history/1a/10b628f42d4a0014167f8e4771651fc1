@@ -1,0 +1,37 @@
+package train;
+
+public class TicketBox {
+	
+}
+
+class TicketAgent extends Thread {
+	private boolean nowOnTicketing;
+	public Customer customerOnTicketing;
+	
+	public TicketAgent(){};
+	public void newCustomer(Customer customer){
+		if(customer != null) {
+			customerOnTicketing = customer;
+		} else {
+			return;
+		}
+	}
+	
+	public boolean getNowOnTicketing(){
+		return nowOnTicketing;
+	}
+
+	public synchronized void run(){
+		nowOnTicketing = true;
+		int customerTicketingTime = Integer.parseInt(customerOnTicketing.getTicketingTime());
+		try {
+			Thread.sleep(customerTicketingTime * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Ticketing for "+ customerOnTicketing.getName() +"is complete.");
+		//Todo quetoPlatform ;;;
+		nowOnTicketing = false;
+	}
+}

@@ -1,0 +1,275 @@
+package train;
+
+import java.util.LinkedList;
+
+public interface AlgorithmPolicy {
+	public int goingTo(String StationName);
+}
+
+class AsanTicketBox extends TicketBox implements AlgorithmPolicy{
+	public AsanTicketBox(){                                                                                                                                                                                                                                                 
+		this.StationName = "Asan";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+
+	@Override
+	public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 36;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 35;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 25;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 43;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 20;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 42;
+		}
+		else 
+			return 0;
+	}
+}
+
+class ChuncheonTicketBox extends TicketBox implements AlgorithmPolicy{
+	public ChuncheonTicketBox(){                                                                                                                                                                                                                                                 
+		this.stationName = "Chuncheon";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Asan"))
+		{
+			return 36;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 45;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 49;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 31;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 16;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 28;
+		}
+		else 
+			return 0;
+	}
+}
+
+class DaejeonTicketBox extends TicketBox implements AlgorithmPolicy{
+	public DaejeonTicketBox(){                                                                                                                                                                                                                                                 
+		this.stationName = "Daejeon";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 45;
+		}
+		else if(StationName.equals("Asan"))
+		{
+			return 35;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 12;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 15;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 29;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 23;
+		}
+		else 
+			return 0;
+	}
+}
+
+class GwangjuTicketBox extends TicketBox implements AlgorithmPolicy{
+	public GwangjuTicketBox(){                                                                                                                                                                                                                                                 
+		this.stationName = "Gwangju";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 49;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 12;
+		}
+		else if(StationName.equals("Asan"))
+		{
+			return 25;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 18;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 41;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 35;
+		}
+		else 
+			return 0;
+	}	
+}
+
+class GyeongjuTicketBox extends TicketBox implements AlgorithmPolicy{
+	public GyeongjuTicketBox(){                                                                                                                                                                                                                                                 
+		this.stationName = "Gyeongju";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 31;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 15;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 18;
+		}
+		else if (StationName.equals("Asan"))
+		{
+			return 43;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 47;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 32;
+		}
+		else 
+			return 0;
+	}
+}
+
+class SeoulTicketBox extends TicketBox implements AlgorithmPolicy{
+	public SeoulTicketBox(){
+		this.stationName = "Seoul";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 16;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 29;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 41;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 47;
+		}
+		else if (StationName.equals("Asan"))
+		{
+			return 20;
+		}
+		else if (StationName.equals("Wonju"))
+		{
+			return 22;
+		}
+		else 
+			return 0;
+	}
+}
+
+class WonjuTicketBox extends TicketBox implements AlgorithmPolicy{
+	public WonjuTicketBox(){                                                                                                                                                                                                                                                 
+		this.stationName = "Wonju";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+	
+	
+public int goingTo(String StationName) {
+		
+		if (StationName.equals("Chuncheon"))
+		{
+			return 28;
+		}
+		else if(StationName.equals("Daejeon"))
+		{
+			return 23;
+		}
+		else if(StationName.equals("Gwangju"))
+		{
+			return 35;
+		}
+		else if (StationName.equals("Gyeongju"))
+		{
+			return 32;
+		}
+		else if (StationName.equals("Seoul"))
+		{
+			return 22;
+		}
+		else if (StationName.equals("Asan"))
+		{
+			return 42;
+		}
+		else 
+			return 0;
+	}
+}

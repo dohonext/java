@@ -1,9 +1,0 @@
-package stream;
-
-public class AirplaneTest {
-
-	public AirplaneTest() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

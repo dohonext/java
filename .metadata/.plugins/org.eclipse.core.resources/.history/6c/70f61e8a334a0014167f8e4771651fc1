@@ -1,0 +1,108 @@
+package train;
+
+import java.util.Queue;
+
+public class TicketBox {
+	public String stationName;
+	public Queue<Customer> platformQueue;
+	public Queue<Customer> waitTicketingQueue;
+	
+	TicketAgent ticketAgent1 = new TicketAgent();
+	TicketAgent ticketAgent2 = new TicketAgent();
+	TicketAgent ticketAgent3 = new TicketAgent();
+	
+	
+	Customer CustomerOnTicketing1;
+	Customer CustomerOnTicketing2;
+	Customer CustomerOnTicketing3;
+	
+	public void ticketingStart()
+	{	
+		if(!ticketAgent1.getNowOnTicketing())
+		{
+			if(!waitTicketingQueue.isEmpty()){
+				CustomerOnTicketing1 = waitTicketingQueue.poll();
+				ticketAgent1.newCustomer(CustomerOnTicketing1);
+				Thread th1 = new Thread(ticketAgent1);
+				th1.start();
+			}
+		}
+		
+		if(!ticketAgent2.getNowOnTicketing())
+		{
+			if(!waitTicketingQueue.isEmpty()){
+				nowTicketingClient2 = waitTicketingQueue.poll();	
+				ticketingHelper2.newClient(nowTicketingClient2);
+				Thread th2 = new Thread(ticketingHelper2);
+				th2.start();
+			}
+		}
+		
+		if(!ticketingHelper3.getNowTicketing())
+		{
+			if(!waitTicketingQueue.isEmpty()){
+				nowTicketingClient3 = waitTicketingQueue.poll();
+				ticketingHelper3.newClient(nowTicketingClient3);
+				Thread th3 = new Thread(ticketingHelper3);
+				th3.start();
+			}
+		}
+		
+		try{
+			if(nowTicketingClient1.getTicket())
+			{
+				platformQueue.add(nowTicketingClient1);
+				nowTicketingClient1.setTicket(false);
+				System.out.println(nowTicketingClient1.getClientName()+ "on platform");
+			}
+			
+			if(nowTicketingClient2.getTicket())
+			{
+				platformQueue.add(nowTicketingClient2);
+				nowTicketingClient2.setTicket(false);
+				System.out.println(nowTicketingClient2.getClientName()+ "on platform");
+			}
+			
+			if(nowTicketingClient3.getTicket())
+			{
+				platformQueue.add(nowTicketingClient3);
+				nowTicketingClient3.setTicket(false);
+				System.out.println(nowTicketingClient3.getClientName()+ "on platform");
+			}	
+		}catch(Exception e){};
+		
+		
+	}
+}
+
+class TicketAgent extends Thread {
+	private boolean nowOnTicketing;
+	public Customer customerOnTicketing;
+	
+	public TicketAgent(){};
+	public void newCustomer(Customer customer){
+		if(customer != null) {
+			customerOnTicketing = customer;
+		} else {
+			return;
+		}
+	}
+	
+	public boolean getNowOnTicketing(){
+		return nowOnTicketing;
+	}
+
+	public synchronized void run(){
+		nowOnTicketing = true;
+		int customerTicketingTime = Integer.parseInt(customerOnTicketing.getTicketingTime());
+		try {
+			Thread.sleep(customerTicketingTime * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Ticketing for "+ customerOnTicketing.getName() +"is complete.");
+		//Todo queToPlatform ;;;
+		nowOnTicketing = false;
+	}
+}

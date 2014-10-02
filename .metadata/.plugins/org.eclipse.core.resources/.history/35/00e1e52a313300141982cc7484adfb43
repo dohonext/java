@@ -1,6 +1,0 @@
-package decorator;
-
-public abstract class Airplane {
-	
-	public abstract void attack();
-}

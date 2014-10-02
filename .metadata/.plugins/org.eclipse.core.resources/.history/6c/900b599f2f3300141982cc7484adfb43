@@ -1,6 +1,0 @@
-package stream;
-
-public abstract class Airplane {
-	
-	public abstract void attack();
-}

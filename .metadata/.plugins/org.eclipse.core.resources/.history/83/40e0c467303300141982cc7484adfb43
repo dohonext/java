@@ -1,9 +1,0 @@
-package decorator;
-
-public class SideAttack {
-
-	public SideAttack() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

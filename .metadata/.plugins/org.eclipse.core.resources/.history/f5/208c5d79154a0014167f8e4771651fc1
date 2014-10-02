@@ -1,0 +1,79 @@
+package train;
+
+public class Customer {
+	private int id;
+	private String name;
+	private int stationReachTime;
+	private int ticketingTime;
+	private int departureStation;
+	private int arrivalStation;
+	private int waitingForTicketingTime;
+	private int tokenTimeForTicketing;
+	private int waitingForTrainTime;
+	private int arrivedTimeToTrain;
+	
+	public Customer(int id, String name, int stationReachTime, int ticketingTime, 
+					int departureStation, int arrivalStation) {
+		this.id = id;
+		this.name = name;
+		this.stationReachTime = stationReachTime;
+		this.ticketingTime = ticketingTime;
+		this.departureStation = departureStation;
+		this.arrivalStation = arrivalStation;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				id+":"+
+				name+":"+
+				stationReachTime+":"+
+				ticketingTime+":"+
+				//출발역
+				//도착역
+				
+				//출력정보
+				waitingForTicketingTime+":"+
+				tokenTimeForTicketing+":"+
+				waitingForTrainTime+":"+
+				arrivedTimeToTrain+":");
+		return sb.toString();
+	}
+	
+	public String csvHeaderToString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				"아이디"+","+
+				"이름"+","+
+				"도착시간"+","+
+				"티켓팅소요시간"+","+
+				"출발역"+","+
+				"도착역"+","+
+				"티켓대기시간"+","+
+				"티켓팅한시간"+","+
+				"열차기다린시간"+","+
+				"목적지도착시간"+"\n");
+		return sb.toString();
+	}
+	
+	public String csvToString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append(
+				id+","+
+				name+","+
+				stationReachTime+","+
+				ticketingTime+","+
+				departureStation+","+
+				arrivalStation+","+
+				waitingForTicketingTime+","+
+				tokenTimeForTicketing+","+
+				waitingForTrainTime+","+
+				arrivedTimeToTrain+"\n"
+		);
+		return sb.toString();
+	}
+	
+	
+	
+}

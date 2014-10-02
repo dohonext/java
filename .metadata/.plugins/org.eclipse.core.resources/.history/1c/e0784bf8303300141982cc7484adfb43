@@ -1,9 +1,0 @@
-package decorator;
-
-public class MissileAirplane {
-
-	public MissileAirplane() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

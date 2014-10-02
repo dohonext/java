@@ -1,0 +1,48 @@
+package train;
+
+import java.util.LinkedList;
+
+public interface AlgorithmPolicy {
+	public int goingTo(String stationName);
+}
+
+class AsanStation extends TicketBox implements AlgorithmPolicy{
+	public AsanStation(){                                                                                                                                                                                                                                                 
+		this.stationName = "Asan";
+		this.platformQueue = new LinkedList<Customer>();
+		this.waitTicketingQueue = new LinkedList<Customer>();
+	}
+
+	@Override
+	public int goingTo(String stationName) {
+		
+		if (stationName.equals("Chuncheon"))
+		{
+			return 36;
+		}
+		else if(stationName.equals("Daejeon"))
+		{
+			return 35;
+		}
+		else if(stationName.equals("Gwangju"))
+		{
+			return 25;
+		}
+		else if (stationName.equals("Gyeongju"))
+		{
+			return 43;
+		}
+		else if (stationName.equals("Seoul"))
+		{
+			return 20;
+		}
+		else if (stationName.equals("Wonju"))
+		{
+			return 42;
+		}
+		else 
+			return 0;
+	}
+	
+	
+}
